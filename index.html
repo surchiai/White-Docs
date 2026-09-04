@@ -112,11 +112,18 @@
     font-weight:600;
     font-size:1.5rem;
     letter-spacing:0.01em;
-    display:flex;align-items:baseline;gap:8px;
+    display:flex;align-items:center;gap:8px;
     margin-bottom:2px;
   }
   .brand .glyph{
     font-family:var(--mono);font-size:0.9rem;color:var(--green);
+  }
+  .brand-logo{
+    width:28px;height:28px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+    border:1px solid var(--line);
   }
   .brand-sub{
     font-family:var(--mono);
@@ -477,6 +484,16 @@
     font-family:var(--serif);
     font-weight:600;
     font-size:1.3rem;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .footer-logo{
+    width:20px;height:20px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+    border:1px solid var(--line);
   }
   .footer-tag{
     font-family:var(--mono);font-size:0.7rem;color:var(--muted);
@@ -554,8 +571,8 @@
 
 <div class="layout">
   <nav class="sidebar">
-    <div class="brand"><span class="glyph">$</span>SURCHI</div>
-    <div class="brand-sub" data-i18n="brand.sub">Whitepaper · v1.1</div>
+    <div class="brand"><img src="https://raw.githubusercontent.com/surchiai/White-Docs/refs/heads/main/public/Logo.png" alt="SURCHI logo" class="brand-logo">SURCHI</div>
+    <div class="brand-sub" data-i18n="brand.sub">Whitepaper</div>
     <div class="lang-switch" id="langSwitch">
       <button class="lang-btn active" data-lang="en" type="button">EN</button>
       <button class="lang-btn" data-lang="ko" type="button">한국어</button>
@@ -916,7 +933,7 @@
     <footer>
       <div class="footer-top">
         <div>
-          <div class="footer-brand">SURCHI</div>
+          <div class="footer-brand"><img src="https://raw.githubusercontent.com/surchiai/White-Docs/refs/heads/main/public/Logo.png" alt="SURCHI logo" class="footer-logo">SURCHI</div>
           <div class="footer-tag" data-i18n="footer.tag">The trading intelligence layer for every chain you trade on.</div>
         </div>
         <div class="footer-socials">
@@ -932,8 +949,11 @@
           <a href="https://discord.gg/uH2Jp3yu5h" target="_blank" rel="noopener" aria-label="Discord" title="Discord">
             <svg viewBox="0 0 24 24"><path d="M20.3 5.3A17.6 17.6 0 0 0 15.9 4l-.2.4a12.5 12.5 0 0 1 3.9 1.6 15 15 0 0 0-13.2 0 12.5 12.5 0 0 1 3.9-1.6L10.1 4a17.6 17.6 0 0 0-4.4 1.3C2.8 9 2 12.6 2.3 16.1a17.7 17.7 0 0 0 5.4 2.7l.7-1.1a11 11 0 0 1-1.7-.8l.4-.3a12.6 12.6 0 0 0 10.7 0l.4.3c-.5.3-1.1.6-1.7.8l.7 1.1a17.7 17.7 0 0 0 5.4-2.7c.4-4-.6-7.5-2-10.8zM8.9 14.3c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7zm6.2 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7z"/></svg>
           </a>
-          <a href="https://t.me/SurchiWeb3Community" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram · SurchiWeb3Community">
+          <a href="https://t.me/Surchicommunity" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram · Surchicommunity">
             <svg viewBox="0 0 24 24"><path d="M21.9 4.5 18.6 20.3c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9L18 7.1c.5-.4-.1-.6-.7-.2L6.7 13.5l-4.8-1.5c-1-.3-1-1 .2-1.5L20.6 3.4c.9-.3 1.6.2 1.3 1.1z"/></svg>
+          </a>
+          <a href="https://medium.com/@surchicoin" target="_blank" rel="noopener" aria-label="Medium" title="Medium · @surchicoin">
+            <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75c.66 0 1.19 2.57 1.19 5.75z"/></svg>
           </a>
           <a href="https://GitHub.com/surchiai" target="_blank" rel="noopener" aria-label="Github" title="Github">
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1-1.5-1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.8v2.6c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
@@ -941,7 +961,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div data-i18n="footer.version">SURCHI Whitepaper · Version 1.1 · 2026</div>
+        <div data-i18n="footer.version">SURCHI Whitepaper · 2026</div>
         <div><span data-i18n="footer.websiteLabel">Website:</span> <span class="url"><a href="https://www.surchi.xyz" target="_blank" rel="noopener">surchi.xyz</a></span></div>
         <div data-i18n="footer.disclaimer">Informational purposes only. Not financial advice.</div>
       </div>
@@ -984,7 +1004,7 @@
 
     /* ===== Language switcher ===== */
     const translations = {
-      "brand.sub": { en:"Whitepaper · v1.1", ko:"백서 · v1.1", zh:"白皮书 · v1.1", es:"Libro blanco · v1.1", fr:"Livre blanc · v1.1", de:"Whitepaper · v1.1", ja:"ホワイトペーパー · v1.1" },
+      "brand.sub": { en:"Whitepaper", ko:"백서", zh:"白皮书", es:"Libro blanco", fr:"Livre blanc", de:"Whitepaper", ja:"ホワイトペーパー" },
       "nav.summary": { en:"Executive Summary", ko:"요약", zh:"执行摘要", es:"Resumen ejecutivo", fr:"Résumé exécutif", de:"Zusammenfassung", ja:"要旨" },
       "nav.vision": { en:"Vision &amp; Mission", ko:"비전과 미션", zh:"愿景与使命", es:"Visión y misión", fr:"Vision et mission", de:"Vision &amp; Mission", ja:"ビジョンとミッション" },
       "nav.problems": { en:"Problems Solved", ko:"해결하는 문제", zh:"解决的问题", es:"Problemas resueltos", fr:"Problèmes résolus", de:"Gelöste Probleme", ja:"解決する課題" },
@@ -1200,7 +1220,7 @@
       },
 
       "footer.tag": { en:"The trading intelligence layer for every chain you trade on.", ko:"당신이 거래하는 모든 체인을 위한 트레이딩 인텔리전스 레이어.", zh:"为你交易的每一条链打造的交易智能层。", es:"La capa de inteligencia de trading para cada cadena en la que operas.", fr:"La couche d'intelligence de trading pour chaque blockchain sur laquelle vous tradez.", de:"Die Trading-Intelligence-Schicht für jede Chain, auf der Sie handeln.", ja:"あなたが取引するあらゆるチェーンのためのトレーディング・インテリジェンス・レイヤー。" },
-      "footer.version": { en:"SURCHI Whitepaper · Version 1.1 · 2026", ko:"SURCHI 백서 · 버전 1.1 · 2026", zh:"SURCHI 白皮书 · 版本 1.1 · 2026", es:"Libro blanco de SURCHI · Versión 1.1 · 2026", fr:"Livre blanc SURCHI · Version 1.1 · 2026", de:"SURCHI Whitepaper · Version 1.1 · 2026", ja:"SURCHIホワイトペーパー · バージョン1.1 · 2026" },
+      "footer.version": { en:"SURCHI Whitepaper · 2026", ko:"SURCHI 백서 · 2026", zh:"SURCHI 白皮书 · 2026", es:"Libro blanco de SURCHI · 2026", fr:"Livre blanc SURCHI · 2026", de:"SURCHI Whitepaper · 2026", ja:"SURCHIホワイトペーパー · 2026" },
       "footer.websiteLabel": { en:"Website:", ko:"웹사이트:", zh:"网站:", es:"Sitio web:", fr:"Site web :", de:"Website:", ja:"ウェブサイト:" },
       "footer.disclaimer": { en:"Informational purposes only. Not financial advice.", ko:"정보 제공 목적으로만 제공되며 투자 조언이 아닙니다.", zh:"本文仅供参考,不构成财务建议。", es:"Solo con fines informativos. No es asesoramiento financiero.", fr:"À titre informatif uniquement. Ceci ne constitue pas un conseil financier.", de:"Nur zu Informationszwecken. Keine Finanzberatung.", ja:"本情報は参考目的のみであり、投資助言ではありません。" }
     };
